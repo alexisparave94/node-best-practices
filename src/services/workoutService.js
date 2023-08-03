@@ -6,8 +6,9 @@ const getAllWorkouts = () => {
   return workouts;
 };
 
-const getOneWorkout = () => {
-  return;
+const getOneWorkout = (id) => {
+  const workout = Workout.getOneWorkout(id)
+  return workout;
 };
 
 const createNewWorkout = (newWorkout) => {
