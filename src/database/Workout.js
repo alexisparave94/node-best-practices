@@ -23,8 +23,25 @@ const createNewWorkout = (newWorkout) => {
   return newWorkout;
 };
 
+const updateOneWorkout = (id, changes) => {
+  const indexForUpdate = DB.workouts.findIndex((workout) => workout.id === id);
+  
+  if (indexForUpdate === -1) return;
+
+  const updatedWorkout = {
+    ...DB.workouts[indexForUpdate],
+    ...changes,
+    updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
+  };
+
+  DB.workouts[indexForUpdate] = updatedWorkout;
+  saveToDatabase(DB)
+  return updatedWorkout;
+}
+
 module.exports = {
   getAllWorkouts,
   getOneWorkout,
   createNewWorkout,
+  updateOneWorkout
 };

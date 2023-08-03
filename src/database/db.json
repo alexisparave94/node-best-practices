@@ -65,8 +65,8 @@
       ]
     },
     {
-      "name": "Core Buster",
-      "mode": "AMRAP 20",
+      "name": "New Core Buster",
+      "mode": "AMRAP 210",
       "equipment": [
         "rack",
         "barbell",
@@ -84,7 +84,7 @@
       ],
       "id": "df07100b-88e4-4de7-99ec-b11be80eec86",
       "createdAt": "8/3/2023, 1:03:17 AM",
-      "updatedAt": "8/3/2023, 1:03:18 AM"
+      "updatedAt": "8/3/2023, 4:51:59 AM"
     }
   ]
 }
