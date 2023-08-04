@@ -13,6 +13,8 @@
   "dependencies": {
     "apicache": "^1.6.3",
     "express": "^4.18.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
