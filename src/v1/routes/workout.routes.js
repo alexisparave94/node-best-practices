@@ -6,6 +6,22 @@ const apicache = require('apicache')
 
 const cache = apicache.middleware;
 
+/**
+ * @openapi
+ * /api/v1/workouts:
+ *   get:
+ *     tags:
+ *       - Workouts
+ *     responses:
+ *       200:
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items: 
+ *                 type: object
+ */
 router.get("/", cache('2 minutes'), workoutController.getAllWorkouts);
 
 router.get("/:workoutId", workoutController.getOneWorkout);
