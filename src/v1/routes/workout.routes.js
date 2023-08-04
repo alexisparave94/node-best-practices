@@ -2,8 +2,11 @@ const express = require("express");
 const router = express.Router();
 const workoutController = require('../../controllers/workoutController')
 const recordController = require('../../controllers/recordController')
+const apicache = require('apicache')
 
-router.get("/", workoutController.getAllWorkouts);
+const cache = apicache.middleware;
+
+router.get("/", cache('2 minutes'), workoutController.getAllWorkouts);
 
 router.get("/:workoutId", workoutController.getOneWorkout);
 
